@@ -5,6 +5,8 @@ import socket
 import argparse
 import time
 
+# You will need to forward the correct port
+# Can also use ngrok: ./ngrok tcp <localip>:9999
 ip =       # Your IP goes here! (string)
 port =     9999 # default for TP-Link plugs
 duration = 5 # How many seconds bubble blower will be on (adjust as necessary)

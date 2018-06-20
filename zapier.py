@@ -6,8 +6,9 @@ import argparse
 import time
 
 # Set target IP, port and command to send
-ip = # Your IP goes here!
-port = 9999
+ip = # Your IP goes here! (string)
+port = 9999 # default for TP-Link plugs
+duration = 5 # How many seconds bubble blower will be on, adjust as necessary
 version = 0.1
 
 # Encryption and Decryption of TP-Link Smart Home Protocol
@@ -46,7 +47,7 @@ except socket.error:
 	quit("Cound not connect to host " + ip + ":" + str(port))
 
 
-time.sleep(5)
+time.sleep(duration)
 cmd = '{"system":{"set_relay_state":{"state":0}}}'
 
 # Send command and receive reply
